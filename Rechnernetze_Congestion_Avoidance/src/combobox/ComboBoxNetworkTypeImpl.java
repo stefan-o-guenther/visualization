@@ -1,0 +1,26 @@
+/**
+ * @author:	Stefan Otto Günther
+ * @date:	23.04.2014
+ */
+
+package combobox;
+
+import javax.swing.JComboBox;
+
+import enumeration.EnumNetworkType;
+
+public class ComboBoxNetworkTypeImpl extends JComboBox<Object> {
+
+	private static final long serialVersionUID = 1L;
+
+	public ComboBoxNetworkTypeImpl() {
+		super(types);		
+	}
+	
+	private static String[] types = {"TCP Reno", "TCP Tahoe", "Both"};
+	private static EnumNetworkType[] vals = {EnumNetworkType.TCP_RENO, EnumNetworkType.TCP_TAHOE, EnumNetworkType.BOTH};
+		
+	public EnumNetworkType getType() {
+		return  vals[super.getSelectedIndex()];
+	}
+}

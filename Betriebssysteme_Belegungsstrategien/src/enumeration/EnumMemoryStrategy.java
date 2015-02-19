@@ -1,0 +1,15 @@
+/**
+ * @author:	Stefan Otto Günther
+ * @date:	27.01.2014
+ */
+
+package enumeration;
+
+public enum EnumMemoryStrategy {
+	FIRST_FIT,
+	NEXT_FIT,
+	BEST_FIT,
+	WORST_FIT,
+	SCHNEIDERINNEN_BEST_FIT,
+	NULL
+}

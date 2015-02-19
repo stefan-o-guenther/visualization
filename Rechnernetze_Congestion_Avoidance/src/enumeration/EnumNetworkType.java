@@ -1,0 +1,13 @@
+/**
+ * @author:	Stefan Otto Günther
+ * @date:	12.05.2014
+ */
+
+package enumeration;
+
+public enum EnumNetworkType {
+	TCP_RENO,
+	TCP_TAHOE,
+	BOTH,
+	NONE
+}

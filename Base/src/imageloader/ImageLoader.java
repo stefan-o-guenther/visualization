@@ -1,0 +1,140 @@
+package imageloader;
+/**
+ * @author:	Stefan Otto Günther
+ * @date:	27.01.2014
+ */
+
+
+import java.awt.image.BufferedImage;
+import java.io.InputStream;
+
+import javax.imageio.ImageIO;
+import javax.swing.ImageIcon;
+
+import base.Checker;
+
+public class ImageLoader {
+
+	private static ImageIcon imgIconHelp16 = null;
+	private static ImageIcon imgIconHelp22 = null;
+	private static ImageIcon imgIconHelp32 = null;
+	private static ImageIcon imgIconHelp48 = null;
+	private static ImageIcon imgIconRabbit = null;
+	private static ImageIcon imgIconTurtle = null;
+	private static ImageIcon imgIconTimeout01 = null;
+	private static ImageIcon imgIconTimeout02 = null;
+	
+	private static BufferedImage imgRouter = null;
+	private static BufferedImage imgRouter2 = null;
+	
+	private static BufferedImage loadImage(String path) throws Exception {
+		try {
+			Checker.checkIfString(path);		
+			InputStream stream = ImageLoader.class.getResourceAsStream(path);
+			BufferedImage image = ImageIO.read(stream);	
+			return image;
+		} catch (Exception ex) {
+			throw ex;
+		}
+	}	
+	
+	/*
+	private static ImageIcon loadImageIconAsStream(String path) throws Exception {
+		try {
+			if (path == null) {
+				throw new NullPointerException();
+			}
+			if (path.equals("")) {
+				throw new IllegalArgumentException();
+			}
+			InputStream stream = ImageLoader.class.getResourceAsStream(path);
+			BufferedImage image = ImageIO.read(stream);
+			ImageIcon icon = new ImageIcon(image);
+			return icon;
+		} catch (Exception ex) {
+			throw ex;
+		}
+	}
+	*/
+	
+	private static ImageIcon loadImageIconDirectly(String path) {
+		try {
+			Checker.checkIfNotNull(path);
+			Checker.checkIfString(path);
+			ImageIcon icon = new ImageIcon(ImageLoader.class.getResource(path));
+			return icon;
+		} catch (Exception ex) {
+			throw ex;
+		}
+	}
+	
+	public static ImageIcon getImageIconHelp16() {
+		if (imgIconHelp16 == null) {
+			imgIconHelp16 = loadImageIconDirectly("/base/img/16x16_help.png");
+		}
+		return imgIconHelp16;
+	}
+	
+	public static ImageIcon getImageIconHelp22() {
+		if (imgIconHelp22 == null) {
+			imgIconHelp22 = loadImageIconDirectly("/base/img/22x22_help.png");
+		}
+		return imgIconHelp22;	
+	}
+	
+	public static ImageIcon getImageIconHelp32() {
+		if (imgIconHelp32 == null) {
+			imgIconHelp32 = loadImageIconDirectly("/base/img/32x32_help.png");
+		}
+		return imgIconHelp32;
+	}
+	
+	public static ImageIcon getImageIconHelp48() {
+		if (imgIconHelp48 == null) {
+			imgIconHelp48 = loadImageIconDirectly("/base/img/48x48_help.png");
+		}
+		return imgIconHelp48;
+	}
+	
+	public static ImageIcon getImageIconRabbit() {
+		if (imgIconRabbit == null) {
+			imgIconRabbit = loadImageIconDirectly("/base/img/rabbit.png");
+		}
+		return imgIconRabbit;
+	}
+	
+	public static ImageIcon getImageIconTurtle() {
+		if (imgIconTurtle == null) {
+			imgIconTurtle = loadImageIconDirectly("/base/img/turtle.png");
+		}
+		return imgIconTurtle;
+	}
+	
+	public static ImageIcon getImageIconTimeout01() {
+		if (imgIconTimeout01 == null) {
+			imgIconTimeout01 = loadImageIconDirectly("/base/img/timeout01.png");
+		}
+		return imgIconTimeout01;
+	}
+	
+	public static ImageIcon getImageIconTimeout02() {
+		if (imgIconTimeout02 == null) {
+			imgIconTimeout02 = loadImageIconDirectly("/base/img/timeout02.png");
+		}
+		return imgIconTimeout02;
+	}
+	
+	public static BufferedImage getBufferedImageRouter() throws Exception {
+		if (imgRouter == null) {
+			imgRouter = loadImage("/base/img/70px-Router.png");
+		}
+		return imgRouter;
+	}
+	
+	public static BufferedImage getBufferedImageRouter2() throws Exception {
+		if (imgRouter2 == null) {
+			imgRouter2 = loadImage("/base/img/300px-Router.svg.png");
+		}
+		return imgRouter2;
+	}
+}

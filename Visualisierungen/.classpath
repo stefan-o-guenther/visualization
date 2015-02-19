@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/Base"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/Betriebssysteme_Belegungsstrategien"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/Betriebssysteme_Buddy_Systeme"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/Betriebssysteme_Seitenersetzungsstrategien"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/Rechnernetze_Congestion_Avoidance"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/Rechnernetze_Dijkstra_Algorithmus"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/Rechnernetze_Pipeline_Protocol"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/Rechnernetze_Queueing_And_Loss"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/Rechnernetze_TCP_Fairness"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/Rechnernetze_TCP_Retransmission"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
